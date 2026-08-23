@@ -100,6 +100,7 @@ html, body {
     transform: skewX(-15deg);
     position: relative;
     z-index: 1;
+
 }
 
 .menu a span {
@@ -174,7 +175,7 @@ html, body {
 
 .menu li:nth-child(1) a {
     color: #51eefc;
-    transform: skewY(-25deg) translateX(0);
+    transform: skewY(-25deg) translateX(0) translateY(1rem);
 }
 
 .menu li:nth-child(2) a {
@@ -227,7 +228,7 @@ html, body {
 
 
 .menu li:nth-child(1) a:hover {
-    transform: skewY(-25deg) translateX(0) scale(1.1);
+    transform: skewY(-25deg) translateX(0) translateY(1rem) scale(1.1);
     z-index: 2;
 }
 
@@ -396,4 +397,301 @@ body.is-panel-open .menu, body.is-panel-open .droits, body.is-panel-open .name {
     max-height: 50%;
     margin-left: 19%;
     clip-path: polygon(10% 0, 100% 5%, 100% 90%, 0% 93%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------COMPETENCES---------------*/
+
+.full-view {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    z-index: 200;
+
+    opacity: 0; /*Pour le cacher*/
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.full-view.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1); /*Petit effet de zoom*/
+}
+
+/*Etat inactif*/
+.full-view:not(.active) {
+    transform: scale(1.05);
+}
+
+.titre {
+    position: absolute;
+    left: 2%;
+    bottom: -17vh;
+    color: rgba(0, 0, 0, 0.3);
+    font-family: 'Anton', sans-serif;
+    font-size: 8.5vw;
+    transform: skewX(-15deg);
+    z-index: 5;
+    letter-spacing: 0.5vw;
+}
+
+.close-btn-view {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    background: none;
+    border: none;
+    color: white;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.6vw;
+    cursor: pointer;
+    transform: skewX(-10deg);
+    transition: all 0.2s;
+    z-index: 100;
+}
+
+.close-btn-view:hover {
+    color: #ff005a;
+    transform: skewX(-10deg) scale(1.1);
+}
+
+.video-tracker {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 100vw;
+    height: 56.25vw;
+    min-height: 100vh;
+    min-width: 177.77vh;
+}
+
+.video-comp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.video-tracker .titre {
+    position: absolute;
+    bottom: 3.8%;
+    left: 4%;
+    margin: 0;
+    z-index: 2;
+    font-family: 'Anton', sans-serif;
+    color: rgba(0, 0, 0, 0.3);
+    transform: skewX(-15deg);
+}
+
+.comp-content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.chart {
+    position: absolute;
+    left: 30%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+/*Forcer le canva*/
+.chart canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*################ PROJETS ################*/
+.project-layout {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 1%;
+}
+
+.projects-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8vw;
+    width: 35vw;
+
+    position: absolute;
+    left: 2%;
+    top: 30%;
+    transform: translateY(-50deg);
+}
+
+.project-item {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    font-family: 'Anton', sans-serif;
+    font-size: 2.3vw;
+    display: flex;
+    align-items: center;
+    transform: skewX(-15deg);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-right: 4px solid transparent;
+}
+
+.project-item:hover {
+    background-color: rgba(0, 0, 0, 1);
+    border-right: 4px solid #00e5ff;
+    transform: skew(-15deg) translateX(1vw);
+}
+
+.project-role {
+    font-size: 1.65vw;
+    padding: 0.5vw 1vw;
+    color: black;
+    margin-right: 1vw;
+}
+
+.project-name {
+    padding-right: 2vw;
+}
+
+.project-modal {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    transform: translateY(-50%) scaleY(0);
+    transform-origin: center;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 300;
+    display: flex;
+    justify-content: center;
+    padding: 3vw 0;
+    border-top: 3px solid #00e5ff;
+    border-bottom: 3px solid #ff005a;
+}
+
+.project-modal.active {
+    transform: translateY(-50%) scaleY(1);
+}
+
+.modal-content {
+    width: 60vw;
+    color: white;
+    font-family: sans-serif;
+}
+
+.modal-content h3 {
+    font-family: 'Anton', sans-serif;
+    font-size: 4vw;
+    color: white;
+    margin: 0 0 1vw 0;
+    transform: skewX(-10deg);
+}
+
+.modal-content p {
+    font-size: 1.2vw;
+    line-height: 1.5;
+    margin-bottom: 2vw;
+}
+
+.modal-btn {
+    display: inline-block;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5vw;
+    color: black;
+    background-color: #00e5ff;
+    padding: 0.5vw 1.5vw;
+    text-decoration: none;
+    transform: skewX(-10deg);
+    border: none;
+    cursor: pointer;
+    margin-right: 1vw;
+    transition: all 0.2s;
+}
+
+.modal-btn:hover {
+    background-color: #ff005a;
+    color: white;
+}
+
+.modal-btn.close-btn {
+    background-color: white;;
+}
+
+.modal-btn.close-btn:hover {
+    color: #ff005a;
 }

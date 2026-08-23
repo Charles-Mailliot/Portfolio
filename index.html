@@ -30,8 +30,8 @@
             <li><a href="#moi"> <span>MOI</span> </a></li>
             <li><a href="#parcours"> <span>PARCOURS</span> </a></li>
             <li><a href="#projets"> <span>PROJETS</span> </a></li>
-            <li><a href="#github"> <span>GITHUB</span> </a></li>
-            <li><a href="#competence"> <span>COMPÉTENCES</span> </a></li>
+            <li><a href="https://github.com/Charles-Mailliot" target="_blank" rel="noopener noreferrer"> <span>GITHUB</span> </a></li>
+            <li><a href="#competences"> <span>COMPÉTENCES</span> </a></li>
             <li><a href="#social"> <span>SOCIAL</span> </a></li>
         </ul>
     </main>
@@ -101,6 +101,107 @@
 
 
 
+
+    <section id="view-competences" class="full-view">
+        <div class="video-tracker">
+            <video autoplay loop muted playsinline class="video-comp">
+                <source src="assets/Resume_enhanced.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas les vidéos HTML5.
+            </video>
+            <h2 class="titre"><span>COMPETENCES</span></h2>
+        </div>
+
+        <button class="close-btn-view">RETOUR</button>
+        <div class="comp-content">
+            
+            <div class="chart">
+                <!-- Le conteneur du graphique -->
+                <div style="position: relative; height: 40vw; width: 100%; margin-bottom: 30px;">
+                    <canvas id="radarChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section id="view-projets" class="full-view">
+        <video autoplay loop muted playsinline class="video-comp">
+            <source src="assets/Options_enhanced.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas les vidéos HTML5.
+        </video>
+
+        <button class="close-btn-view">RETOUR</button>
+
+
+        <div class="view-content projects-layout">
+
+            <!--LA LISTE DES PROJETS-->
+            <ul class="projects-list">
+
+                <li class="project-item" data-title="Portfolio"
+                    data-desc="Développement de mon portfolio (ce que vous regardez actuellement), HTML, CSS, JavaScript."
+                    data-link="https://github.com/Charles-Mailliot/Portfolio">
+                    <span class="project-role" style="background-color: #00e5ff;">WEB</span>
+                    <span class="project-name">Portfolio</span>
+                </li>
+
+
+                <li class="project-item" data-title="Projet Monster"
+                    data-desc="Le project Monster réalisé dans le cadre du cours 'Développement d'application IHM' à l'IUT Nancy-Charlemagne. L'objectif est de faire survivre un monstre en lui faisant réaliser diverses actions (qui peuvent être aléatoires si on ne fait rien). Mise en pratique de JavaScript et les différentes intéractions dans un site."
+                    data-link="https://github.com/Charles-Mailliot/projetMonster_MAILLIOT">
+                    <span class="project-role" style="background-color: #00e5ff;">WEB</span>
+                    <span class="project-name">Monster</span>
+                </li>
+
+
+                <li class="project-item" data-title="Sokoban"
+                    data-desc="Création d'un clone du célèbre jeu de réflexion Sokoban. Projet collaboratif mettant en pratique les concepts de qualité de développement."
+                    data-link="https://github.com/Charles-Mailliot/sokoban_MAILLIOT_BERNARD">
+                    <span class="project-role" style="background-color: #ff005a;">DEV</span>
+                    <span class="project-name">Sokoban</span>
+                </li>
+
+
+                <li class="project-item" data-title="Charles&Jean"
+                    data-desc="Tout premier projet réalisé durant le cadre des cours. L'objectif ici était de sonder plusieurs personnes pour connaître les styles et préférences vestimentaires de chacun afin de proposer des vêtements éco-responsables en vente sur un site internet."
+                    data-link="">
+                    <span class="project-role" style="background-color: #00ff6a;">GESTION</span>
+                    <span class="project-role" style="background-color: #00e5ff;">WEB</span>
+                    <span class="project-name">Charles & Jean</span>
+                </li>
+
+
+                <li class="project-item" data-title="Zeldiablo"
+                    data-desc="Création d'un jeu en équipe par itération : on apporte les fonctionnalités du jeu une par une pour avoir à la fin un jeu complet qui fonctionne, le tout en Java."
+                    data-link="">
+                    <span class="project-role" style="background-color: #0077ff;">EQUIPE</span>
+                    <span class="project-role" style="background-color: #ff005a;">DEV</span>
+                    <span class="project-name">Zeldiablo</span>
+                </li>
+            </ul>
+
+
+            <!--LA BANDE NOIRE CENTRALE-->
+            <div id="project-modal" class="project-modal">
+                <div class="modal-content">
+                    <h3 id="modal-title">Titre</h3>
+                    <p id="modal-desc">Description du projet...</p>
+                    <a id="modal-link" href="#" target="_blank" class="modal-btn">Voir le projet</a>
+                    <button id="close-modal-btn" class="modal-btn close-btn">FERMER</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/script.js"></script>
 
 </body>
