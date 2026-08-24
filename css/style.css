@@ -514,7 +514,7 @@ body.is-panel-open .menu, body.is-panel-open .droits, body.is-panel-open .name {
 
 .video-tracker .titre {
     position: absolute;
-    bottom: 3.8%;
+    bottom: 3.65%;
     left: 4%;
     margin: 0;
     z-index: 2;
