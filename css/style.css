@@ -593,7 +593,7 @@ body.is-panel-open .menu, body.is-panel-open .droits, body.is-panel-open .name {
 
     position: absolute;
     left: 2%;
-    top: 30%;
+    top: 27%;
     transform: translateY(-50deg);
 }
 
