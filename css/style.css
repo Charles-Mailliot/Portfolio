@@ -393,10 +393,10 @@ body.is-panel-open .menu, body.is-panel-open .droits, body.is-panel-open .name {
 }
 
 .imageMoi {
-    max-width: 60%;
-    max-height: 50%;
+    max-width: 70%;
+    max-height: 70%;
     margin-left: 19%;
-    clip-path: polygon(10% 0, 100% 5%, 100% 90%, 0% 93%);
+    /*clip-path: polygon(10% 0, 100% 5%, 100% 90%, 0% 93%);*/
 }
 
 
