@@ -141,10 +141,19 @@
 
         <div class="view-content projects-layout">
 
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">TOUT</button>
+                <button class="filter-btn" data-filter="web">WEB</button>
+                <button class="filter-btn" data-filter="donnees">DONNÉES</button>
+                <button class="filter-btn" data-filter="dev">DEV / LOGICIEL</button>
+                <button class="filter-btn" data-filter="gestion equipe">GESTION / ÉQUIPE</button>
+                <button class="filter-btn" data-filter="ia">IA</button>
+            </div>
+
             <!--LA LISTE DES PROJETS-->
             <ul class="projects-list">
 
-                <li class="project-item" data-title="Portfolio"
+                <li class="project-item" data-tags="web" data-title="Portfolio"
                     data-desc="Développement de mon portfolio (ce que vous regardez actuellement), HTML, CSS, JavaScript."
                     data-link="https://github.com/Charles-Mailliot/Portfolio">
                     <span class="project-role" style="background-color: #00e5ff;">WEB</span>
@@ -152,7 +161,7 @@
                 </li>
 
 
-                <li class="project-item" data-title="Projet Monster"
+                <li class="project-item" data-tags="web" data-title="Projet Monster"
                     data-desc="Le project Monster réalisé dans le cadre du cours 'Développement d'application IHM' à l'IUT Nancy-Charlemagne. L'objectif est de faire survivre un monstre en lui faisant réaliser diverses actions (qui peuvent être aléatoires si on ne fait rien). Mise en pratique de JavaScript et les différentes intéractions dans un site."
                     data-link="https://github.com/Charles-Mailliot/projetMonster_MAILLIOT">
                     <span class="project-role" style="background-color: #00e5ff;">WEB</span>
@@ -160,7 +169,7 @@
                 </li>
 
 
-                <li class="project-item" data-title="Sokoban"
+                <li class="project-item" data-tags="dev" data-title="Sokoban"
                     data-desc="Création d'un clone du célèbre jeu de réflexion Sokoban dans le cadre des cours. Projet collaboratif mettant en pratique les concepts de qualité de développement."
                     data-link="https://github.com/Charles-Mailliot/sokoban_MAILLIOT_BERNARD">
                     <span class="project-role" style="background-color: #ff005a;">DEV</span>
@@ -168,7 +177,7 @@
                 </li>
 
 
-                <li class="project-item" data-title="Charles&Jean"
+                <li class="project-item" data-tags="gestion web" data-title="Charles&Jean"
                     data-desc="Tout premier projet réalisé durant le cadre des cours. L'objectif ici était de sonder plusieurs personnes pour connaître les styles et préférences vestimentaires de chacun afin de proposer des vêtements éco-responsables en vente sur un site internet."
                     data-link="https://github.com/Charles-Mailliot/Projet_RecueilDeBesoin_CharlesEtJean">
                     <span class="project-role" style="background-color: #00ff6a;">GESTION</span>
@@ -177,7 +186,7 @@
                 </li>
 
 
-                <li class="project-item" data-title="Zeldiablo"
+                <li class="project-item" data-tags="equipe dev" data-title="Zeldiablo"
                     data-desc="Création d'un jeu en équipe (dans le cadre des cours) par itération : on apporte les fonctionnalités du jeu une par une pour avoir à la fin un jeu complet qui fonctionne, le tout en Java."
                     data-link="">
                     <span class="project-role" style="background-color: #0077ff;">EQUIPE</span>
@@ -186,11 +195,40 @@
                 </li>
 
 
-                <li class="project-item" data-title="Ma Boîte à Médoc"
+                <li class="project-item" data-tags="dev" data-title="Ma Boîte à Médoc"
                     data-desc="Développement d'une application sur Android Studio en Java. L'objectif de l'application est de pouvoir suivre et gérer les différents médicaments que l'on possède chez soi (Posologie, date de péremption, catégorie, etc). L'application est en cours de développement."
                     data-link="">
                     <span class="project-role" style="background-color: #ff005a;">DEV</span>
                     <span class="project-name">Ma Boîte à Médoc</span>
+                </li>
+
+
+                <li class="project-item" data-tags="web donnees gestion" data-title="Touiteur"
+                    data-desc="Développement d’un clone de X (Twitter) en PHP en équipe. Visionnage et publication de touites, profils, tags, inscirption, ... Prise en charge complète de la gestion de projet ainsi que de l'architecture de la base de données."
+                    data-link="https://github.com/Zimout2/Touiteur.app">
+                    <span class="project-role" style="background-color: #00ff6a;">GESTION</span>
+                    <span class="project-role" style="background-color: #fffb00;">DONNEES</span>
+                    <span class="project-role" style="background-color: #00e5ff;">WEB</span>
+                    <span class="project-name">Touiteur</span>
+                </li>
+
+
+                <li class="project-item" data-tags="ia web donnees" data-title="Focale"
+                    data-desc="Application web faite avec Claude pour aider au focus sur des projets. Chaque semaine, une roue tire au sort un projet ou un apprentissage sur lequel se concentrer. Des quêtes quotidiennes, un calendrier de sessions et un minuteur aident à tenir la routine. Des salons privés permettent de comparer sa régularité avec des amis. L'application s'installe sur l'écran d'accueil du téléphone et se synchronise entre ordinateur et mobile."
+                    data-link="https://github.com/Hydra-V-ion/Focale">
+                    <span class="project-role" style="background-color: #fffb00;">DONNEES</span>
+                    <span class="project-role" style="background-color: #00e5ff;">WEB</span>
+                    <span class="project-role" style="background-color: #ff00f7;">IA</span>
+                    <span class="project-name">Focale</span>
+                </li>
+
+
+                <li class="project-item" data-tags="ia web" data-title="Ondine"
+                    data-desc="Application web faite avec Claude qui transforme la musique en visuels en direct. Elle analyse le son (kicks, basses, aigus) et fait réagir plus de vingt scènes, des fractales aux effets ASCII. Un éditeur de nœuds permet de relier des cartes entre elles pour composer ses propres visuels, avec des effets comme le glitch ou le contraste noir et blanc. On peut enregistrer une vidéo de sa création et la partager, le tout directement dans le navigateur."
+                    data-link="https://github.com/Hydra-V-ion/Ondine">
+                    <span class="project-role" style="background-color: #00e5ff;">WEB</span>
+                    <span class="project-role" style="background-color: #ff00f7;">IA</span>
+                    <span class="project-name">Ondine</span>
                 </li>
             </ul>
 

@@ -203,3 +203,23 @@ if (canvasCompetences) {
         }
     });
 }
+
+
+const filterBtns = document.querySelectorAll('.filter-btn');
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        //On découpe le filtre en tableau de mots
+        const filters = btn.getAttribute('data-filter').split(' ');
+
+        projectItems.forEach(item => {
+            const tags = item.getAttribute('data-tags') || '';
+            //On affiche si le filtre est "all" ou si au moins un mot correspond
+            const matches = filters.includes('all') || filters.some(f => tags.includes(f));
+            item.style.display = matches ? 'flex' : 'none';
+        });
+    });
+});

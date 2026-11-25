@@ -582,19 +582,61 @@ body.is-panel-open .menu, body.is-panel-open .droits, body.is-panel-open .name {
     padding-left: 1%;
 }
 
+.project-filters {
+    position: absolute;
+    top: 8%;
+    left: 2%;
+    display: flex;
+    gap: 0.6vw;
+    z-index: 20;
+}
+
+.filter-btn {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.4vw;
+    padding: 0.3vw 1.2vw;
+    border: none;
+    border-bottom: 3px solid transparent;
+    transform: skewX(-15deg);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    color: #00e5ff;
+    transform: skewX(-15deg) translateY(-2px);
+}
+
+.filter-btn.active {
+    background-color: #00e5ff;
+    color: black;
+    border-bottom: 3px solid #ff005a;
+}
+
 .projects-list {
     list-style: none;
-    padding: 0;
+    padding: 2vh 2vw 2vh 1.5vw;
     margin: 0;
     display: flex;
     flex-direction: column;
     gap: 0.8vw;
-    width: 35vw;
+    width: 38vw;
 
     position: absolute;
     left: 2%;
-    top: 25%;
-    transform: translateY(-50deg);
+    top: 52%;
+    transform: translateY(-50%);
+
+    max-height: 72vh;
+    overflow-y: auto;
+    overflow-x: visible;
+    scrollbar-width: none;
+}
+
+.projects-list::-webkit-scrollbar {
+    display: none;
 }
 
 .project-item {
