@@ -908,3 +908,60 @@ body.is-panel-open .menu, body.is-panel-open .droits, body.is-panel-open .name {
 .modal-btn.close-btn:hover {
     color: #ff005a;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.lang-switch {
+    position: fixed;
+    top: 2%;
+    right: 2%;
+    z-index: 260;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #00e5ff;
+    border: 2px solid #00e5ff;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.4vw;
+    letter-spacing: 1px;
+    padding: 0.3vw 1vw;
+    cursor: pointer;
+    transform: skewX(-15deg);
+    transition: all 0.2s ease;
+}
+
+.lang-switch:hover {
+    background-color: #ff005a;
+    border-color: #ff005a;
+    color: white;
+    transform: skewX(-15deg) scale(1.08);
+}
+
+body.is-panel-open .lang-switch {
+    opacity: 0;
+    pointer-events: none;
+}

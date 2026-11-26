@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -44,32 +44,29 @@
         CHARLES MAILLIOT
     </div>
 
-
+    <button id="lang-toggle" class="lang-switch" aria-label="Changer de langue">EN</button>
 
     <main class="content">
         <ul class="menu">
-            <li><a href="#moi"> <span>MOI</span> </a></li>
-            <li><a href="#parcours"> <span>PARCOURS</span> </a></li>
-            <li><a href="#projets"> <span>PROJETS</span> </a></li>
+            <li><a href="#moi"> <span data-i18n="menu.moi">MOI</span> </a></li>
+            <li><a href="#parcours"> <span data-i18n="menu.parcours">PARCOURS</span> </a></li>
+            <li><a href="#projets"> <span data-i18n="menu.projets">PROJETS</span> </a></li>
             <li><a href="https://github.com/Charles-Mailliot" target="_blank" rel="noopener noreferrer">
                     <span>GITHUB</span> </a></li>
-            <li><a href="#competences"> <span>COMPÉTENCES</span> </a></li>
+            <li><a href="#competences"> <span data-i18n="menu.competences">COMPÉTENCES</span> </a></li>
             <li><a href="#social"> <span>SOCIAL</span> </a></li>
         </ul>
     </main>
 
-    <div class="droits">
+    <div class="droits" data-i18n="footer.rights">
         Design inspiré par Persona 3. Tous les assets et droits appartiennent à Atlus / SEGA.
     </div>
 
-
-
-
     <aside id="panel-moi" class="side-panel">
-        <button class="closeBtn">RETOUR</button>
+        <button class="closeBtn" data-i18n="btn.back">RETOUR</button>
         <div class="moi-content">
-            <h2>MOI</h2>
-            <p>Je suis un passionné de technologies et de création sous toutes ses formes. En parallèle de mes études en
+            <h2 data-i18n="moi.title">MOI</h2>
+            <p data-i18n="moi.bio">Je suis un passionné de technologies et de création sous toutes ses formes. En parallèle de mes études en
                 informatique, je cultive un écosystème personnel très visuel et sonore : montage vidéo, musique, et une
                 immersion quotidienne dans la culture gaming et le design graphique. Mon
                 moteur principal ? Une curiosité insatiable. J'aime apprendre en continu, tester de nouveaux logiciels,
@@ -79,52 +76,47 @@
     </aside>
 
     <aside id="panel-parcours" class="side-panel">
-        <button class="closeBtn">RETOUR</button>
+        <button class="closeBtn" data-i18n="btn.back">RETOUR</button>
         <div class="parcours-content">
-            <h2>PARCOURS</h2>
+            <h2 data-i18n="parcours.title">PARCOURS</h2>
             <h3>2025</h3>
-            <p>
+            <p data-i18n="parcours.p1">
                 Stage d'observation chez SAM Informatique
             </p>
-            <p>
-                Baccalauréat mention Bien, spécialités Mathématiques,Physique-Chimie et option Mathématiques Expertes au
+            <p data-i18n="parcours.p2">
+                Baccalauréat mention Bien, spécialités Mathématiques, Physique-Chimie et option Mathématiques Expertes au
                 lycée Pierre et Marie Curie à Neufchâteau
             </p>
-            <p>
+            <p data-i18n="parcours.p3">
                 1ère année de BUT Informatique à l'IUT Nancy-Charlemagne.
             </p>
 
             <h3>2026</h3>
-            <p>
+            <p data-i18n="parcours.p4">
                 2ème année de BUT Informatique à l'IUT Nancy-Charlemagne.
             </p>
-            <p>
+            <p data-i18n="parcours.p5">
                 Cast du tournoi Mario Kart et Valorant à la ULLAN à Metz.
             </p>
         </div>
     </aside>
 
     <aside id="panel-social" class="side-panel">
-        <button class="closeBtn">RETOUR</button>
+        <button class="closeBtn" data-i18n="btn.back">RETOUR</button>
         <div class="social-content">
             <h2>SOCIAL</h2>
             <h3>MAIL</h3>
             <p>charles.mailliot88@gmail.com</p>
             <p>charles.mailliot2@etu.univ-lorraine.fr</p>
-            <h3>NUMÉRO</h3>
+            <h3 data-i18n="social.phone">NUMÉRO</h3>
             <p>07 84 71 96 31</p>
             <h3>GITHUB</h3>
-            <p>Professionel : <a href="https://github.com/Charles-Mailliot">Charles-Mailliot</a></p>
-            <p>Personnel : <a href="https://github.com/Hydra-V-ion">Hydra-V-ion</a></p>
+            <p><span data-i18n="social.pro">Professionnel : </span><a href="https://github.com/Charles-Mailliot" target="_blank" rel="noopener noreferrer">Charles-Mailliot</a></p>
+            <p><span data-i18n="social.perso">Personnel : </span><a href="https://github.com/Hydra-V-ion" target="_blank" rel="noopener noreferrer">Hydra-V-ion</a></p>
             <h3>LINKEDIN</h3>
-            <p>Lien : <a href="https://www.linkedin.com/in/charles-mailliot-55a067399/">Charles Mailliot</a></p>
+            <p><span data-i18n="social.link">Lien : </span><a href="https://www.linkedin.com/in/charles-mailliot-55a067399/" target="_blank" rel="noopener noreferrer">Charles Mailliot</a></p>
         </div>
     </aside>
-
-
-
-
-
 
     <section id="view-competences" class="full-view">
         <div class="video-tracker">
@@ -132,17 +124,17 @@
                 <source src="assets/Resume_enhanced.mp4" type="video/mp4">
                 Votre navigateur ne supporte pas les vidéos HTML5.
             </video>
-            <h2 class="titre"><span>COMPETENCES</span></h2>
+            <h2 class="titre"><span data-i18n="comp.watermark">COMPETENCES</span></h2>
         </div>
 
-        <button class="close-btn-view">RETOUR</button>
+        <button class="close-btn-view" data-i18n="btn.back">RETOUR</button>
         <div class="comp-content">
 
             <!--ONGLETS DE NAVIGATION-->
             <div class="comp-tabs">
-                <button class="comp-tab-btn active" data-target="tab-but">COMPÉTENCES BUT</button>
-                <button class="comp-tab-btn" data-target="tab-tech">LANGAGES & OUTILS</button>
-                <button class="comp-tab-btn" data-target="tab-langues">LANGUES</button>
+                <button class="comp-tab-btn active" data-target="tab-but" data-i18n="comp.tab.but">COMPÉTENCES BUT</button>
+                <button class="comp-tab-btn" data-target="tab-tech" data-i18n="comp.tab.tech">LANGAGES & OUTILS</button>
+                <button class="comp-tab-btn" data-target="tab-langues" data-i18n="comp.tab.lang">LANGUES</button>
             </div>
 
             <!--GRAPHIQUE RADAR-->
@@ -158,7 +150,7 @@
             <div id="tab-tech" class="comp-panel">
                 <div class="tech-groups">
                     <div class="tech-category">
-                        <h3>LANGAGES MAÎTRISÉS</h3>
+                        <h3 data-i18n="comp.tech.mastered">LANGAGES MAÎTRISÉS</h3>
                         <div class="tech-badges">
                             <span class="tech-badge">Java</span>
                             <span class="tech-badge">SQL / PL-SQL</span>
@@ -168,7 +160,7 @@
                     </div>
 
                     <div class="tech-category">
-                        <h3>EN APPRENTISSAGE</h3>
+                        <h3 data-i18n="comp.tech.learning">EN APPRENTISSAGE</h3>
                         <div class="tech-badges">
                             <span class="tech-badge learning">Rust</span>
                             <span class="tech-badge learning">Python</span>
@@ -176,7 +168,7 @@
                     </div>
 
                     <div class="tech-category">
-                        <h3>OUTILS UTILISÉS</h3>
+                        <h3 data-i18n="comp.tech.tools">OUTILS UTILISÉS</h3>
                         <div class="tech-badges">
                             <span class="tech-badge tool">Git / GitHub</span>
                             <span class="tech-badge tool">Linux / WSL</span>
@@ -192,20 +184,20 @@
             <div id="tab-langues" class="comp-panel">
                 <ul class="lang-list">
                     <li class="lang-item flag-fr">
-                        <span class="lang-level">NATIF</span>
-                        <span class="lang-name">Français</span>
+                        <span class="lang-level" data-i18n="lang.level.native">NATIF</span>
+                        <span class="lang-name" data-i18n="lang.fr">Français</span>
                     </li>
                     <li class="lang-item flag-en">
                         <span class="lang-level">B2</span>
-                        <span class="lang-name">Anglais</span>
+                        <span class="lang-name" data-i18n="lang.en">Anglais</span>
                     </li>
                     <li class="lang-item flag-es">
                         <span class="lang-level">A2 - B1</span>
-                        <span class="lang-name">Espagnol</span>
+                        <span class="lang-name" data-i18n="lang.es">Espagnol</span>
                     </li>
                     <li class="lang-item flag-fi">
-                        <span class="lang-level">EN APPRENTISSAGE</span>
-                        <span class="lang-name">Finnois</span>
+                        <span class="lang-level" data-i18n="lang.level.learning">EN APPRENTISSAGE</span>
+                        <span class="lang-name" data-i18n="lang.fi">Finnois</span>
                     </li>
                 </ul>
             </div>
@@ -213,129 +205,120 @@
         </div>
     </section>
 
-
-
-
-
-
     <section id="view-projets" class="full-view">
         <video autoplay loop muted playsinline class="video-comp">
             <source src="assets/Options_enhanced.mp4" type="video/mp4">
             Votre navigateur ne supporte pas les vidéos HTML5.
         </video>
 
-        <button class="close-btn-view">RETOUR</button>
-
+        <button class="close-btn-view" data-i18n="btn.back">RETOUR</button>
 
         <div class="view-content projects-layout">
 
             <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">TOUT</button>
+                <button class="filter-btn active" data-filter="all" data-i18n="proj.filter.all">TOUT</button>
                 <button class="filter-btn" data-filter="web">WEB</button>
-                <button class="filter-btn" data-filter="donnees">DONNÉES</button>
-                <button class="filter-btn" data-filter="dev">DEV / LOGICIEL</button>
-                <button class="filter-btn" data-filter="gestion equipe">GESTION / ÉQUIPE</button>
-                <button class="filter-btn" data-filter="ia">IA</button>
+                <button class="filter-btn" data-filter="donnees" data-i18n="proj.filter.data">DONNÉES</button>
+                <button class="filter-btn" data-filter="dev" data-i18n="proj.filter.dev">DEV / LOGICIEL</button>
+                <button class="filter-btn" data-filter="gestion equipe" data-i18n="proj.filter.team">GESTION / ÉQUIPE</button>
+                <button class="filter-btn" data-filter="ia" data-i18n="role.ia">IA</button>
             </div>
 
             <!--LA LISTE DES PROJETS-->
             <ul class="projects-list">
 
-                <li class="project-item" data-tags="web" data-title="Portfolio"
+                <li class="project-item" data-tags="web" data-title="Portfolio" data-title-en="Portfolio"
                     data-desc="Développement de mon portfolio (ce que vous regardez actuellement), HTML, CSS, JavaScript."
+                    data-desc-en="Development of my personal portfolio (what you are currently browsing), built with HTML, CSS, and JavaScript."
                     data-link="https://github.com/Charles-Mailliot/Portfolio">
                     <span class="project-role" style="background-color: #00e5ff;">WEB</span>
                     <span class="project-name">Portfolio</span>
                 </li>
 
-
-                <li class="project-item" data-tags="web" data-title="Projet Monster"
+                <li class="project-item" data-tags="web" data-title="Projet Monster" data-title-en="Monster Project"
                     data-desc="Le project Monster réalisé dans le cadre du cours 'Développement d'application IHM' à l'IUT Nancy-Charlemagne. L'objectif est de faire survivre un monstre en lui faisant réaliser diverses actions (qui peuvent être aléatoires si on ne fait rien). Mise en pratique de JavaScript et les différentes intéractions dans un site."
+                    data-desc-en="The Monster project developed for the 'GUI Application Development' course at IUT Nancy-Charlemagne. The goal is to keep a virtual monster alive by triggering various actions (some occurring randomly when idle). Hands-on practice with JavaScript and interactive web events."
                     data-link="https://github.com/Charles-Mailliot/projetMonster_MAILLIOT">
                     <span class="project-role" style="background-color: #00e5ff;">WEB</span>
                     <span class="project-name">Monster</span>
                 </li>
 
-
-                <li class="project-item" data-tags="dev" data-title="Sokoban"
+                <li class="project-item" data-tags="dev" data-title="Sokoban" data-title-en="Sokoban"
                     data-desc="Création d'un clone du célèbre jeu de réflexion Sokoban dans le cadre des cours. Projet collaboratif mettant en pratique les concepts de qualité de développement."
+                    data-desc-en="Creation of a clone of the classic Sokoban puzzle game as a university project. Collaborative work applying software development quality principles and unit testing."
                     data-link="https://github.com/Charles-Mailliot/sokoban_MAILLIOT_BERNARD">
                     <span class="project-role" style="background-color: #ff005a;">DEV</span>
                     <span class="project-name">Sokoban</span>
                 </li>
 
-
-                <li class="project-item" data-tags="gestion web" data-title="Charles&Jean"
+                <li class="project-item" data-tags="gestion web" data-title="Charles&Jean" data-title-en="Charles & Jean"
                     data-desc="Tout premier projet réalisé durant le cadre des cours. L'objectif ici était de sonder plusieurs personnes pour connaître les styles et préférences vestimentaires de chacun afin de proposer des vêtements éco-responsables en vente sur un site internet."
+                    data-desc-en="First academic project completed at university. The goal was to survey users on their clothing styles and preferences in order to design and showcase an eco-friendly apparel e-commerce website."
                     data-link="https://github.com/Charles-Mailliot/Projet_RecueilDeBesoin_CharlesEtJean">
-                    <span class="project-role" style="background-color: #00ff6a;">GESTION</span>
+                    <span class="project-role" style="background-color: #00ff6a;" data-i18n="role.gestion">GESTION</span>
                     <span class="project-role" style="background-color: #00e5ff;">WEB</span>
                     <span class="project-name">Charles & Jean</span>
                 </li>
 
-
-                <li class="project-item" data-tags="equipe dev" data-title="Zeldiablo"
+                <li class="project-item" data-tags="equipe dev" data-title="Zeldiablo" data-title-en="Zeldiablo"
                     data-desc="Création d'un jeu en équipe (dans le cadre des cours) par itération : on apporte les fonctionnalités du jeu une par une pour avoir à la fin un jeu complet qui fonctionne, le tout en Java."
+                    data-desc-en="Iterative team development of a 2D action-adventure game in Java for a university course, adding game features sprint by sprint until reaching a complete playable release."
                     data-link="">
-                    <span class="project-role" style="background-color: #0077ff;">EQUIPE</span>
+                    <span class="project-role" style="background-color: #0077ff;" data-i18n="role.equipe">ÉQUIPE</span>
                     <span class="project-role" style="background-color: #ff005a;">DEV</span>
                     <span class="project-name">Zeldiablo</span>
                 </li>
 
-
-                <li class="project-item" data-tags="dev" data-title="Ma Boîte à Médoc"
+                <li class="project-item" data-tags="dev" data-title="Ma Boîte à Médoc" data-title-en="My Med Box"
                     data-desc="Développement d'une application sur Android Studio en Java. L'objectif de l'application est de pouvoir suivre et gérer les différents médicaments que l'on possède chez soi (Posologie, date de péremption, catégorie, etc). L'application est en cours de développement."
+                    data-desc-en="Development of an Android application in Java using Android Studio to track and manage household medications (dosage, expiration dates, categories, etc.). Currently in active development."
                     data-link="">
                     <span class="project-role" style="background-color: #ff005a;">DEV</span>
                     <span class="project-name">Ma Boîte à Médoc</span>
                 </li>
 
-
-                <li class="project-item" data-tags="web donnees gestion" data-title="Touiteur"
+                <li class="project-item" data-tags="web donnees gestion" data-title="Touiteur" data-title-en="Touiteur"
                     data-desc="Développement d’un clone de X (Twitter) en PHP en équipe. Visionnage et publication de touites, profils, tags, inscirption, ... Prise en charge complète de la gestion de projet ainsi que de l'architecture de la base de données."
+                    data-desc-en="Team development of an X (Twitter) microblogging clone in PHP. Features feed browsing, posting, user profiles, hashtags, and authentication. Full ownership of project management and database architecture."
                     data-link="https://github.com/Zimout2/Touiteur.app">
-                    <span class="project-role" style="background-color: #00ff6a;">GESTION</span>
-                    <span class="project-role" style="background-color: #fffb00;">DONNEES</span>
+                    <span class="project-role" style="background-color: #00ff6a;" data-i18n="role.gestion">GESTION</span>
+                    <span class="project-role" style="background-color: #fffb00;" data-i18n="role.data">DONNÉES</span>
                     <span class="project-role" style="background-color: #00e5ff;">WEB</span>
                     <span class="project-name">Touiteur</span>
                 </li>
 
-
-                <li class="project-item" data-tags="ia web donnees" data-title="Focale"
+                <li class="project-item" data-tags="ia web donnees" data-title="Focale" data-title-en="Focale"
                     data-desc="Application web faite avec Claude pour aider au focus sur des projets. Chaque semaine, une roue tire au sort un projet ou un apprentissage sur lequel se concentrer. Des quêtes quotidiennes, un calendrier de sessions et un minuteur aident à tenir la routine. Des salons privés permettent de comparer sa régularité avec des amis. L'application s'installe sur l'écran d'accueil du téléphone et se synchronise entre ordinateur et mobile."
+                    data-desc-en="Web application built with Claude to stay focused on personal projects. Each week, a wheel randomly picks a project or learning goal to prioritize, backed by daily quests, a session calendar, and a focus timer. Includes private rooms to compare streaks with friends, mobile home-screen installation (PWA), and cross-device sync."
                     data-link="https://github.com/Hydra-V-ion/Focale">
-                    <span class="project-role" style="background-color: #fffb00;">DONNEES</span>
+                    <span class="project-role" style="background-color: #fffb00;" data-i18n="role.data">DONNÉES</span>
                     <span class="project-role" style="background-color: #00e5ff;">WEB</span>
-                    <span class="project-role" style="background-color: #ff00f7;">IA</span>
+                    <span class="project-role" style="background-color: #ff00f7;" data-i18n="role.ia">IA</span>
                     <span class="project-name">Focale</span>
                 </li>
 
-
-                <li class="project-item" data-tags="ia web" data-title="Ondine"
+                <li class="project-item" data-tags="ia web" data-title="Ondine" data-title-en="Ondine"
                     data-desc="Application web faite avec Claude qui transforme la musique en visuels en direct. Elle analyse le son (kicks, basses, aigus) et fait réagir plus de vingt scènes, des fractales aux effets ASCII. Un éditeur de nœuds permet de relier des cartes entre elles pour composer ses propres visuels, avec des effets comme le glitch ou le contraste noir et blanc. On peut enregistrer une vidéo de sa création et la partager, le tout directement dans le navigateur."
+                    data-desc-en="Web application built with Claude that turns music into live audio-reactive visuals. It analyzes frequency bands (kicks, bass, highs) to drive over twenty scenes ranging from fractals to ASCII shaders, complete with a node-based visual editor, glitch/contrast effects, and in-browser video recording."
                     data-link="https://github.com/Hydra-V-ion/Ondine">
                     <span class="project-role" style="background-color: #00e5ff;">WEB</span>
-                    <span class="project-role" style="background-color: #ff00f7;">IA</span>
+                    <span class="project-role" style="background-color: #ff00f7;" data-i18n="role.ia">IA</span>
                     <span class="project-name">Ondine</span>
                 </li>
             </ul>
-
 
             <!--La bande noire-->
             <div id="project-modal" class="project-modal">
                 <div class="modal-content">
                     <h3 id="modal-title">Titre</h3>
                     <p id="modal-desc">Description du projet...</p>
-                    <a id="modal-link" href="#" target="_blank" class="modal-btn">Voir le projet</a>
-                    <button id="close-modal-btn" class="modal-btn close-btn">FERMER</button>
+                    <a id="modal-link" href="#" target="_blank" rel="noopener noreferrer" class="modal-btn" data-i18n="modal.view">Voir le projet</a>
+                    <button id="close-modal-btn" class="modal-btn close-btn" data-i18n="modal.close">FERMER</button>
                 </div>
             </div>
 
         </div>
     </section>
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/script.js"></script>

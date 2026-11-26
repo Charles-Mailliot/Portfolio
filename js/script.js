@@ -9,6 +9,7 @@ var modalTitle = document.getElementById('modal-title');
 var modalDesc = document.getElementById('modal-desc');
 var modalLink = document.getElementById('modal-link');
 var closeModalBtn = document.getElementById('close-modal-btn');
+//var currentLang = localStorage.getItem('portfolio_lang') || 'fr';
 
 //Ouverture
 menuLinks.forEach(link => {
@@ -88,8 +89,8 @@ document.addEventListener('click', (event) => {
 projectItems.forEach(item => {
     item.addEventListener('click', () => {
         //On récupère les infos cachées
-        let title = item.getAttribute('data-title');
-        let desc = item.getAttribute('data-desc');
+        let title = (currentLang === 'en' && item.getAttribute('data-title-en')) || item.getAttribute('data-title');
+        let desc = (currentLang === 'en' && item.getAttribute('data-desc-en')) || item.getAttribute('data-desc');
         let link = item.getAttribute('data-link');
 
         //On remplace le texte du modal
@@ -244,3 +245,149 @@ compTabBtns.forEach(btn => {
         }
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ================== TRADUCTION FR / EN ==================
+const translations = {
+    fr: {
+        "menu.moi": "MOI",
+        "menu.parcours": "PARCOURS",
+        "menu.projets": "PROJETS",
+        "menu.competences": "COMPÉTENCES",
+        "btn.back": "RETOUR",
+        "footer.rights": "Design inspiré par Persona 3. Tous les assets et droits appartiennent à Atlus / SEGA.",
+        "moi.title": "MOI",
+        "moi.bio": "Je suis un passionné de technologies et de création sous toutes ses formes. En parallèle de mes études en informatique, je cultive un écosystème personnel très visuel et sonore : montage vidéo, musique, et une immersion quotidienne dans la culture gaming et le design graphique. Mon moteur principal ? Une curiosité insatiable. J'aime apprendre en continu, tester de nouveaux logiciels, et trouver le point d'équilibre parfait où la technique pure rencontre l'art créatif.",
+        "parcours.title": "PARCOURS",
+        "parcours.p1": "Stage d'observation chez SAM Informatique",
+        "parcours.p2": "Baccalauréat mention Bien, spécialités Mathématiques, Physique-Chimie et option Mathématiques Expertes au lycée Pierre et Marie Curie à Neufchâteau",
+        "parcours.p3": "1ère année de BUT Informatique à l'IUT Nancy-Charlemagne.",
+        "parcours.p4": "2ème année de BUT Informatique à l'IUT Nancy-Charlemagne.",
+        "parcours.p5": "Cast du tournoi Mario Kart et Valorant à la ULLAN à Metz.",
+        "social.phone": "NUMÉRO",
+        "social.pro": "Professionnel : ",
+        "social.perso": "Personnel : ",
+        "social.link": "Lien : ",
+        "comp.tab.but": "COMPÉTENCES BUT",
+        "comp.tab.tech": "LANGAGES & OUTILS",
+        "comp.tab.lang": "LANGUES",
+        "comp.tech.mastered": "LANGAGES MAÎTRISÉS",
+        "comp.tech.learning": "EN APPRENTISSAGE",
+        "comp.tech.tools": "OUTILS UTILISÉS",
+        "lang.level.native": "NATIF",
+        "lang.level.learning": "EN APPRENTISSAGE",
+        "lang.fr": "Français",
+        "lang.en": "Anglais",
+        "lang.es": "Espagnol",
+        "lang.fi": "Finnois",
+        "proj.filter.all": "TOUT",
+        "proj.filter.data": "DONNÉES",
+        "proj.filter.dev": "DEV / LOGICIEL",
+        "proj.filter.team": "GESTION / ÉQUIPE",
+        "role.gestion": "GESTION",
+        "role.equipe": "ÉQUIPE",
+        "role.data": "DONNÉES",
+        "modal.view": "Voir le projet",
+        "role.ia": "IA",
+        "comp.watermark": "COMPETENCES",
+        "modal.close": "FERMER",
+        "radar.labels": ['Développement', ['Optimisation', "d'application"], ['Administration', 'réseaux'], 'Données', ['Gestion', 'de projet'], ['Travailler', 'en équipe']]
+    },
+    en: {
+        "menu.moi": "ABOUT ME",
+        "menu.parcours": "BACKGROUND",
+        "menu.projets": "PROJECTS",
+        "menu.competences": "SKILLS",
+        "btn.back": "BACK",
+        "footer.rights": "Design inspired by Persona 3. All assets and rights belong to Atlus / SEGA.",
+        "moi.title": "ABOUT ME",
+        "moi.bio": "I am passionate about technology and creation in all its forms. Alongside my computer science studies, I cultivate a rich visual and audio ecosystem: video editing, music production, and daily immersion in gaming culture and graphic design. My main driver? Insatiable curiosity. I love learning continuously, testing new software, and finding the sweet spot where pure engineering meets creative art.",
+        "parcours.title": "BACKGROUND",
+        "parcours.p1": "Observation internship at SAM Informatique",
+        "parcours.p2": "French Baccalauréat with Honors (Mention Bien), majoring in Mathematics & Physics-Chemistry with Advanced Mathematics option at Lycée Pierre et Marie Curie in Neufchâteau",
+        "parcours.p3": "1st year of BUT Computer Science at IUT Nancy-Charlemagne.",
+        "parcours.p4": "2nd year of BUT Computer Science at IUT Nancy-Charlemagne.",
+        "parcours.p5": "Commentator (caster) for the Mario Kart and Valorant tournaments at ULLAN in Metz.",
+        "social.phone": "PHONE",
+        "social.pro": "Professional: ",
+        "social.perso": "Personal: ",
+        "social.link": "Profile: ",
+        "comp.tab.but": "DEGREE SKILLS",
+        "comp.tab.tech": "LANGUAGES & TOOLS",
+        "comp.tab.lang": "LANGUAGES",
+        "comp.tech.mastered": "PROFICIENT LANGUAGES",
+        "comp.tech.learning": "CURRENTLY LEARNING",
+        "comp.tech.tools": "TOOLS & WORKFLOW",
+        "lang.level.native": "NATIVE",
+        "lang.level.learning": "LEARNING",
+        "lang.fr": "French",
+        "lang.en": "English",
+        "lang.es": "Spanish",
+        "lang.fi": "Finnish",
+        "proj.filter.all": "ALL",
+        "proj.filter.data": "DATA",
+        "proj.filter.dev": "DEV / SOFTWARE",
+        "proj.filter.team": "MANAGEMENT / TEAM",
+        "role.gestion": "MANAGEMENT",
+        "role.equipe": "TEAM",
+        "role.data": "DATA",
+        "modal.view": "View project",
+        "role.ia": "AI",
+        "comp.watermark": "SKILLS",
+        "modal.close": "CLOSE",
+        "radar.labels": ['Development', ['Application', 'Optimization'], ['Network', 'Admin'], 'Databases', ['Project', 'Management'], ['Teamwork']]
+    }
+};
+
+let currentLang = localStorage.getItem('portfolio_lang') || 'fr';
+const langToggleBtn = document.getElementById('lang-toggle');
+
+function applyLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('portfolio_lang', lang);
+    document.documentElement.lang = lang;
+
+    // Met à jour le texte du bouton (affiche la langue cible)
+    if (langToggleBtn) {
+        langToggleBtn.textContent = lang === 'fr' ? 'EN' : 'FR';
+    }
+
+    // Traduit tous les éléments balisés data-i18n
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+            el.textContent = translations[lang][key];
+        }
+    });
+
+    // Met à jour les branches du graphique Chart.js
+    if (typeof competencesChart !== 'undefined') {
+        competencesChart.data.labels = translations[lang]['radar.labels'];
+        competencesChart.update();
+    }
+}
+
+if (langToggleBtn) {
+    langToggleBtn.addEventListener('click', () => {
+        applyLanguage(currentLang === 'fr' ? 'en' : 'fr');
+    });
+}
+
+// Applique la langue sauvegardée au chargement
+applyLanguage(currentLang);
