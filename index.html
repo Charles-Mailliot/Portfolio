@@ -31,7 +31,8 @@
             <li><a href="#moi"> <span>MOI</span> </a></li>
             <li><a href="#parcours"> <span>PARCOURS</span> </a></li>
             <li><a href="#projets"> <span>PROJETS</span> </a></li>
-            <li><a href="https://github.com/Charles-Mailliot" target="_blank" rel="noopener noreferrer"> <span>GITHUB</span> </a></li>
+            <li><a href="https://github.com/Charles-Mailliot" target="_blank" rel="noopener noreferrer">
+                    <span>GITHUB</span> </a></li>
             <li><a href="#competences"> <span>COMPÉTENCES</span> </a></li>
             <li><a href="#social"> <span>SOCIAL</span> </a></li>
         </ul>
@@ -66,7 +67,8 @@
                 Stage d'observation chez SAM Informatique
             </p>
             <p>
-                Baccalauréat mention Bien, spécialités Mathématiques,Physique-Chimie et option Mathématiques Expertes au lycée Pierre et Marie Curie à Neufchâteau
+                Baccalauréat mention Bien, spécialités Mathématiques,Physique-Chimie et option Mathématiques Expertes au
+                lycée Pierre et Marie Curie à Neufchâteau
             </p>
             <p>
                 1ère année de BUT Informatique à l'IUT Nancy-Charlemagne.
@@ -115,13 +117,79 @@
 
         <button class="close-btn-view">RETOUR</button>
         <div class="comp-content">
-            
-            <div class="chart">
-                <!-- Le conteneur du graphique -->
-                <div style="position: relative; height: 40vw; width: 100%; margin-bottom: 30px;">
-                    <canvas id="radarChart"></canvas>
+
+            <!--ONGLETS DE NAVIGATION-->
+            <div class="comp-tabs">
+                <button class="comp-tab-btn active" data-target="tab-but">COMPÉTENCES BUT</button>
+                <button class="comp-tab-btn" data-target="tab-tech">LANGAGES & OUTILS</button>
+                <button class="comp-tab-btn" data-target="tab-langues">LANGUES</button>
+            </div>
+
+            <!--GRAPHIQUE RADAR-->
+            <div id="tab-but" class="comp-panel active">
+                <div class="chart">
+                    <div style="position: relative; height: 36vw; width: 100%;">
+                        <canvas id="radarChart"></canvas>
+                    </div>
                 </div>
             </div>
+
+            <!--LANGAGES & OUTILS-->
+            <div id="tab-tech" class="comp-panel">
+                <div class="tech-groups">
+                    <div class="tech-category">
+                        <h3>LANGAGES MAÎTRISÉS</h3>
+                        <div class="tech-badges">
+                            <span class="tech-badge">Java</span>
+                            <span class="tech-badge">SQL / PL-SQL</span>
+                            <span class="tech-badge">HTML / CSS / JavaScript</span>
+                            <span class="tech-badge">PHP</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h3>EN APPRENTISSAGE</h3>
+                        <div class="tech-badges">
+                            <span class="tech-badge learning">Rust</span>
+                            <span class="tech-badge learning">Python</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h3>OUTILS UTILISÉS</h3>
+                        <div class="tech-badges">
+                            <span class="tech-badge tool">Git / GitHub</span>
+                            <span class="tech-badge tool">Linux / WSL</span>
+                            <span class="tech-badge tool">VS Code</span>
+                            <span class="tech-badge tool">IntelliJ</span>
+                            <span class="tech-badge tool">Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--LANGUES-->
+            <div id="tab-langues" class="comp-panel">
+                <ul class="lang-list">
+                    <li class="lang-item flag-fr">
+                        <span class="lang-level">NATIF</span>
+                        <span class="lang-name">Français</span>
+                    </li>
+                    <li class="lang-item flag-en">
+                        <span class="lang-level">B2</span>
+                        <span class="lang-name">Anglais</span>
+                    </li>
+                    <li class="lang-item flag-es">
+                        <span class="lang-level">A2 - B1</span>
+                        <span class="lang-name">Espagnol</span>
+                    </li>
+                    <li class="lang-item flag-fi">
+                        <span class="lang-level">EN APPRENTISSAGE</span>
+                        <span class="lang-name">Finnois</span>
+                    </li>
+                </ul>
+            </div>
+
         </div>
     </section>
 

@@ -153,7 +153,7 @@ if (canvasCompetences) {
             labels: ['Développement', ['Optimisation', 'd\'application'], ['Administration', 'réseaux'], 'Données', ['Gestion', 'de projet'], ['Travailler', 'en équipe']],
             datasets: [{
                 label: 'Niveau',
-                data: [70, 60, 40, 80, 60, 70], 
+                data: [80, 65, 50, 80, 70, 70], 
                 
                 // Le style de l'étoile (Couleurs Persona)
                 backgroundColor: 'rgba(0, 229, 255, 0.4)',
@@ -221,5 +221,26 @@ filterBtns.forEach(btn => {
             const matches = filters.includes('all') || filters.some(f => tags.includes(f));
             item.style.display = matches ? 'flex' : 'none';
         });
+    });
+});
+
+
+
+
+
+//ONGLETS DE COMPÉTENCES
+const compTabBtns = document.querySelectorAll('.comp-tab-btn');
+const compPanels = document.querySelectorAll('.comp-panel');
+
+compTabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        compTabBtns.forEach(b => b.classList.remove('active'));
+        compPanels.forEach(p => p.classList.remove('active'));
+
+        btn.classList.add('active');
+        const targetPanel = document.getElementById(btn.getAttribute('data-target'));
+        if (targetPanel) {
+            targetPanel.classList.add('active');
+        }
     });
 });
