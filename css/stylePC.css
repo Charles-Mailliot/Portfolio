@@ -965,3 +965,45 @@ body.is-panel-open .lang-switch {
     opacity: 0;
     pointer-events: none;
 }
+
+html[lang="en"] .menu li:nth-child(1) a {
+    transform: skewY(-22deg) translateX(-0.1em) translateY(-0.8rem);
+}
+html[lang="en"] .menu li:nth-child(1) a:hover {
+    transform: skewY(-22deg) translateX(-0.1em) translateY(-0.8rem) scale(1.1);
+}
+
+html[lang="en"] .menu li:nth-child(2) a {
+    transform: skewY(-12deg) translateX(-0.35em) translateY(-0.2rem);
+}
+html[lang="en"] .menu li:nth-child(2) a:hover {
+    transform: skewY(-12deg) translateX(-0.35em) translateY(-0.2rem) scale(1.1);
+}
+
+html[lang="en"] .menu li:nth-child(3) a {
+    transform: skewY(-4deg) translateX(0.55em);
+}
+html[lang="en"] .menu li:nth-child(3) a:hover {
+    transform: skewY(-4deg) translateX(0.55em) scale(1.1);
+}
+
+html[lang="en"] .menu li:nth-child(4) a {
+    transform: skewY(-8deg) translateX(-0.2em);
+}
+html[lang="en"] .menu li:nth-child(4) a:hover {
+    transform: skewY(-8deg) translateX(-0.2em) scale(1.1);
+}
+
+html[lang="en"] .menu li:nth-child(5) a {
+    transform: skewY(-14deg) translateX(0.95em);
+}
+html[lang="en"] .menu li:nth-child(5) a:hover {
+    transform: skewY(-14deg) translateX(0.95em) scale(1.1);
+}
+
+html[lang="en"] .menu li:nth-child(6) a {
+    transform: skewY(11deg) translateX(-0.25em);
+}
+html[lang="en"] .menu li:nth-child(6) a:hover {
+    transform: skewY(11deg) translateX(-0.25em) scale(1.1);
+}
