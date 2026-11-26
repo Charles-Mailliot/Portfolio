@@ -9,6 +9,7 @@ html, body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    overflow-x: hidden;
     background-color: transparent;
 }
 
@@ -70,7 +71,7 @@ html, body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 3rem 0 3.5rem 6vw;
+    padding: 3rem 0 3.5rem 3vw;
 }
 
 .menu {
@@ -89,11 +90,11 @@ html, body {
 
 .menu a {
     display: inline-block;
-    padding: 0.1rem 0.2rem;
+    padding: 0.1rem 0.2em;
     background: none;
     border: none;
     font-family: 'Anton', sans-serif;
-    font-size: clamp(4rem, 14.5vw, 5.6rem);
+    font-size: clamp(1.85rem, 9.2vw, 3.5rem);
     line-height: 0.94;
     white-space: nowrap;
     text-decoration: none;
@@ -135,6 +136,7 @@ html, body {
 .menu li:nth-child(5) a {
     color: #297fe1;
     transform: skewY(-6deg) translateX(0.3rem);
+    padding-left: 0;
 }
 
 .menu li:nth-child(6) a {
