@@ -178,7 +178,7 @@ if (canvasCompetences) {
                         color: 'white',
                         font: {
                             family: 'Anton',
-                            size: 20,
+                            size: window.innerWidth <= 900 ? 12 : 20,
                             letterSpacing: 1,
                         },
                         backdropColor: 'rgba(0, 0, 0, 0.7)', // Un fond noir semi-transparent (70% d'opacité)
