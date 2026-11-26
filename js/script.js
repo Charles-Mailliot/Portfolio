@@ -182,7 +182,7 @@ if (canvasCompetences) {
                             letterSpacing: 1,
                         },
                         backdropColor: 'rgba(0, 0, 0, 0.7)', // Un fond noir semi-transparent (70% d'opacité)
-                        backdropPadding: 6, // L'espace entre le texte et le bord de la boîte
+                        backdropPadding: window.innerWidth <= 900 ? 3 : 6, // L'espace entre le texte et le bord de la boîte
                         borderRadius: 4
                     },
                     // Échelle de 0 à 100

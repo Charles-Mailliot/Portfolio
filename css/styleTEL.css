@@ -71,7 +71,7 @@ html, body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 3rem 0 3.5rem 3vw;
+    padding: 3rem 0 3.5rem 3.5vw;
 }
 
 .menu {
@@ -90,11 +90,11 @@ html, body {
 
 .menu a {
     display: inline-block;
-    padding: 0.1rem 0.2em;
+    padding: 0.1rem 0.2rem;
     background: none;
     border: none;
     font-family: 'Anton', sans-serif;
-    font-size: clamp(1.85rem, 9.2vw, 3.5rem);
+    font-size: clamp(3.8rem, 13.2vw, 5.4rem);
     line-height: 0.94;
     white-space: nowrap;
     text-decoration: none;

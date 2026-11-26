@@ -537,8 +537,10 @@ body.is-panel-open .menu, body.is-panel-open .droits, body.is-panel-open .name {
     left: 30%;
     top: 45%;
     transform: translate(-50%, -50%);
+    width: 37vw;
     z-index: 10;
 }
+
 
 /*Forcer le canva*/
 .chart canvas {
